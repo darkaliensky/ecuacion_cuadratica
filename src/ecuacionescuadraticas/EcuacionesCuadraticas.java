@@ -34,9 +34,10 @@ public class EcuacionesCuadraticas {
                 B = leer.nextDouble();
                 System.out.println("Ingrese el coeficiente númerico (C) de la ecuación");
                 C = leer.nextDouble();
-            
                 
-                if((B*B - 4*A*C) < 0){
+                if(A == 0) {
+                    System.out.println("Si A es 0 la ecuación no es cuadŕatica, ¡Es lineal!");
+                } else if((B*B - 4*A*C) < 0) {
                     raiz1 = (-B) / (2*A);
                     imaginario1 = Math.sqrt((B*B - 4*A*C) * (-1));
                     imaginario1 = imaginario1 / (2*A);
@@ -44,7 +45,7 @@ public class EcuacionesCuadraticas {
                     System.out.println("Las soluciones para esta ecuación cuadratica de la forma " +A+"x² + " +B+"x + " +C);
                     System.out.println("x1 = " +raiz1+ " + " +imaginario1+ "i x2 = " +raiz1+ " - " +imaginario1+ "i");
                     
-                }else{
+                } else {
                     raiz1 = (-B) + (Math.sqrt(B*B - 4*A*C));
                     raiz1 = raiz1/ (2*A);
                 
@@ -53,8 +54,8 @@ public class EcuacionesCuadraticas {
                 
                     System.out.println("Las soluciones para esta ecuación cuadratica de la forma " +A+"x² + " +B+"x + " +C);
                     System.out.println("x1 = " +raiz1+ " x2 = " +raiz2);
-                }
-                
+                } 
+            
             }
             catch (Exception e){
                 System.out.println("Ingrese un númereo válido");
